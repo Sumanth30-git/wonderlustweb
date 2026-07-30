@@ -30,6 +30,8 @@
 
 <button class="btn-primary" id="bookBtn">Book Now</button>
 
+<button id="darkModeBtn">🌙</button>
+
 </nav>
 
 <section class="hero">
@@ -52,9 +54,19 @@
 
 </section>
 
+
 <section class="destinations" id="destinations">
 
     <h2>Popular Destinations</h2>
+
+
+<div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search destinations..."
+    >
+</div>
 
     <div class="cards">
 
@@ -62,18 +74,46 @@
             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Bali">
             <h3>Bali</h3>
             <p>Experience tropical beaches and breathtaking sunsets.</p>
+<button class="details-btn"
+data-place="Bali"
+data-price="₹45,000"
+data-days="5 Days"
+data-rating="4.8 ⭐"
+data-image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800">
+View Details
+</button>
+ <button class="fav-btn">🤍</button>
         </div>
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800" alt="Paris">
             <h3>Paris</h3>
             <p>The city of lights and unforgettable memories.</p>
+            <button class="details-btn"
+data-place="Paris"
+data-price="₹85,000"
+data-days="7 Days"
+data-rating="4.9 ⭐"
+data-image="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800">
+View Details
+</button>
+ <button class="fav-btn">🤍</button>
+    
         </div>
 
         <div class="card">
             <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800" alt="Dubai">
             <h3>Dubai</h3>
             <p>Luxury, adventure and modern architecture.</p>
+<button class="details-btn"
+data-place="Dubai"
+data-price="₹60,000"
+data-days="6 Days"
+data-rating="4.7 ⭐"
+data-image="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800">
+View Details
+</button>
+ <button class="fav-btn">🤍</button>
         </div>
 
     </div>
@@ -178,10 +218,12 @@
         Book your dream vacation today and create memories that last forever.
     </p>
 
-    <a href="#" class="btn-primary">
-        Book Your Trip
-    </a>
+<button class="btn-primary" id="footerBookBtn">
+    Book Your Trip
+</button>
 </section>
+
+
 
 
 <footer class="footer" id="footer">
@@ -206,9 +248,64 @@
 </footer>
 
 
+<button id="topBtn">⬆</button>
+
+
+<div id="bookingModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeBooking">&times;</span>
+
+        <h2>Book Your Trip</h2>
+
+        <input type="text" id="name" placeholder="Full Name">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="tel" id="phone" placeholder="Phone Number">
+
+        <input type="date" id="travelDate">
+
+        <input type="number" id="people" placeholder="Number of Travelers">
+
+        <button class="btn-primary" id="submitBooking">
+            Confirm Booking
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="close">&times;</span>
+
+        <img id="modalImage" src="" alt="">
+
+        <h2 id="placeName"></h2>
+
+        <p id="price"></p>
+
+        <p id="days"></p>
+
+        <p id="rating"></p>
+
+        <button class="btn-primary" id="bookNow">
+            Book Now
+        </button>
+
+    </div>
+
+</div>
+
 <script src="js/script.js"></script>
 
-<button id="topBtn">⬆</button>
+
 
 </body>
 </html>
